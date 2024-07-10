@@ -1,34 +1,42 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
-import Badge from '../components/Badge.astro'
-import LinkedInIcon from '../components/icons/LinkedIn.astro'
+import Layout from "@/layouts/Layout.astro";
+import SectionContainer from "@/components/SectionContainer.astro";
+import Hero from "@/components/Hero.astro";
+import CodeIcon from "@/components/icons/Code.astro";
+import Projects from "@/components/Projects.astro";
+import ProfileCheck from "@/components/ProfileCheck.astro";
+import AboutMe from "@/components/AboutMe.astro";
 ---
 
-<Layout title="Joaquin's Porfolio">
-	<main>
-		<section class="w-full mx-auto lg:w-[740px] py-44">
-		<h1 class="text-white text-5xl font-bold flex flex-row gap-x-4 pb-5">
-			Hey, soy Joaquin
-			<a 
-			href="https://www.linkedin.com/in/joaquin-aimonetti-80b871200/" 
-			target="_blank"
-			rel="noopener"
-			class="flex jusify-center items-center"
-			><Badge>Listo para trabajar</Badge></div>
-			</a>
-		</h1>
-				<h2 class="text-xl opacity-80 text-wrap">
-			<span class=>Programando desde 2019.</span> <span class="text-green-200"> Desarrollador de Cordoba Argentina</span> 
-		</h2>
-		<ul>
-			<li>
-				<a href="https://www.linkedin.com/in/joaquin-aimonetti-80b871200/">
-					<LinkedInIcon class="w-6 h-6 opacity-80"/></a>
+<Layout
+  title="Porfolio de Joaquin - Desarrollador y Programador"
+  description="Contrata a Joaquin"
+>
+  <main class="px-4">
+    <SectionContainer class="py-16 md:py-36">
+      <Hero />
+    </SectionContainer>
 
-			</li>
-		</ul>
-	</section>
-	</main>
+    <div class="space-y-24">
+      <SectionContainer id="proyectos">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+        >
+          <CodeIcon class="size-7" />
+          Proyectos
+        </h2>
+        <Projects />
+      </SectionContainer>
+
+      <SectionContainer id="sobre-mi">
+        <h2
+          class="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-black/80 dark:text-white"
+        >
+          <ProfileCheck class="size-8" />
+          Sobre mí
+        </h2>
+        <AboutMe />
+      </SectionContainer>
+    </div>
+  </main>
 </Layout>
-

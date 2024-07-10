@@ -1,0 +1,186 @@
+---
+import Html from "./icons/Html.astro";
+import Node from "./icons/Node.astro";
+import Express from "./icons/Express.astro";
+import JWT from "./icons/JWT.astro";
+import Mongo from "./icons/Mongo.astro";
+import JS from "./icons/JS.astro";
+import CSS from "./icons/CSS.astro";
+import LinkButton from "./LinkButton.astro";
+import GitHub from "./icons/GitHub.astro";
+import MySQL from "./icons/MySQL.astro";
+import AWS from "./icons/AWS.astro";
+import Sequelize from "./icons/Sequelize.astro";
+
+const TAGS = {
+  HTML: {
+    name: "Html",
+    class: "bg-black dark:bg-white/10 text-white font-semibold",
+    icon: Html,
+  },
+  NODEJS: {
+    name: "NodeJs",
+    class: "bg-black dark:bg-white/10 text-white font-semibold",
+    icon: Node,
+  },
+  EXPRESS: {
+    name: "Express",
+    class: "bg-black dark:bg-white/10 text-white font-semibold",
+    icon: Express,
+  },
+  JWT: {
+    name: "JWT",
+    class: "bg-black dark:bg-white/10 text-white font-semibold",
+    icon: JWT,
+  },
+  MONGODB: {
+    name: "MONGODB",
+    class: "bg-black dark:bg-white/10 text-white font-semibold",
+    icon: Mongo,
+  },
+  JS: {
+    name: "JavaScript",
+    class: "bg-black dark:bg-white/10 text-white font-semibold",
+    icon: JS,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-black dark:bg-white/10 text-white font-semibold",
+    icon: CSS,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-black dark:bg-white/10 text-white font-semibold",
+    icon: MySQL,
+  },
+  AWS: {
+    name: "AWS",
+    class: "bg-black dark:bg-white/10 text-white font-semibold",
+    icon: AWS,
+  },
+  SEQUELIZE: {
+    name: "Sequelize",
+    class: "bg-black dark:bg-white/10 text-white font-semibold",
+    icon: Sequelize,
+  },
+};
+
+const PROJECTS = [
+  {
+    title: "Ribone Viajes API",
+    description:
+      "La API Ribone-Viajes es una solución diseñada para gestionar servicios de viajes y turismo. Este proyecto permite a los usuarios explorar y reservar diferentes tipos de viajes. Desarrollada con las mejores prácticas en mente, esta API asegura la escalabilidad y mantenibilidad.",
+    link: "#",
+    github: "https://github.com/AimonettiJoaquin/Ribone-Viajes",
+    image: "/projects/RiboneViajes.png",
+    tags: [
+      TAGS.NODEJS,
+      TAGS.EXPRESS,
+      TAGS.SEQUELIZE,
+      TAGS.MYSQL,
+      TAGS.JWT
+    ],
+  },
+  {
+    title: "ONG API",
+    description:
+      "Este proyecto es una API desarrollada para una organización no gubernamental (ONG), diseñada para gestionar el envío de boletines informativos (newsletters) a sus miembros registrados. Utiliza Node.js y Express como framework de servidor, con autenticación y manejo de usuarios mediante JWT. Los boletines se generan y envían a través de la API, asegurando que los miembros reciban actualizaciones regulares y relevantes.",
+    link: "#",
+    github: "https://github.com/AimonettiJoaquin/OT225-server",
+    image: "/projects/ONG.png",
+    tags: [
+      TAGS.NODEJS,
+      TAGS.EXPRESS,
+      TAGS.SEQUELIZE,
+      TAGS.MYSQL,
+      TAGS.JWT,
+      TAGS.AWS,
+    ],
+  },
+
+  {
+    title: "Disney API",
+    description:
+      "Este proyecto es una API desarrollada con Node.js, diseñada para gestionar información sobre películas y personajes de Disney. Utiliza Express como framework de servidor y Sequelize para la interacción con la base de datos. La autenticación y seguridad se manejan con JSON Web Tokens (JWT). Las imágenes de películas y personajes se almacenan en AWS S3. El proyecto ha sido testeado exhaustivamente con Postman.",
+    link: "#",
+    github: "https://github.com/AimonettiJoaquin/alkemy-disney-api",
+    image: "/projects/Disney.svg",
+    tags: [
+      TAGS.NODEJS,
+      TAGS.EXPRESS,
+      TAGS.SEQUELIZE,
+      TAGS.MYSQL,
+      TAGS.JWT,
+      TAGS.AWS,
+    ],
+  },
+
+  {
+    title: "Crontrol de Stock del Super Mami",
+    description:
+      "Control de Stock Super Mami es un sistema de gestión de inventario diseñado para supermercados. Este proyecto fue mi primera experiencia trabajando en equipo como desarrollador. Representó un desafío significativo, ya que utilizamos tecnologías con las que no estaba familiarizado. El sistema permite un seguimiento detallado de las existencias, facilitando la administración y el control de productos en el supermercado.",
+    link: "#",
+    github:
+      "https://github.com/AimonettiJoaquin/TestigosDeJava-CtrlStockSuperMami",
+    image: "/projects/superMami.webp",
+    tags: [
+      TAGS.NODEJS,
+      TAGS.EXPRESS,
+      TAGS.MONGODB,
+      TAGS.JWT,
+      TAGS.HTML,
+      TAGS.CSS,
+    ],
+  },
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    PROJECTS.map(({ image, title, description, tags, github }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-100 md:group-hover:scale-95"
+              loading="lazy"
+              src={image}
+              alt="Logo"
+            />
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex gap-x-2 flex-row">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x2 rounded-full text-xs ${tag.class} py-1 px-2`}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {github && (
+                <LinkButton href={github}>
+                  <GitHub class="size-6" />
+                  Code
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
+    ))
+  }
+</div>
