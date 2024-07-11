@@ -1,0 +1,43 @@
+---
+const personalImageAlt = "Joaquin Aimonetti";
+const currentDate = new Date();
+const birthDay = new Date("1995-11-22");
+let age = currentDate.getFullYear()- birthDay.getFullYear()
+const monthDifference = currentDate.getMonth() - birthDay.getMonth()
+const dayDifference = currentDate.getDate() - birthDay.getDate()
+if (monthDifference < 0||(monthDifference===0 && dayDifference<0)){
+    age--
+}
+---
+
+<article
+  class="flex flex-col items-center justify-center gap-8 text-gray-700 dark:text-gray-300 md:flex-row"
+>
+  <div
+    class="[&>p]:mb-4 [&>p>strong]:text-green-500 dark:[&>p>strong]:text-green-300 [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1"
+  >
+    <p>
+        Me llamo Joaquín Aimonetti, tengo 28 años y soy de Córdoba, Argentina. Estudié la Tecnicatura Universitaria en Programación en la UTN. <strong>Me gusta enfocarme en el backEnd</strong>, encontrando soluciones a problemas.
+    </p>
+    <p>
+      Actualmente estoy trabajando en proyectos que me <strong>desafían</strong
+      > y me ayudan a crecer como profesional.
+    </p>
+    <p>
+      Una de mis pasiones es la filosofía; encuentro en el <strong>pensamiento crítico y el análisis riguroso </strong> una ventaja única para <strong>abordar problemas cotidianos y buscar soluciones</strong>.
+    </p>
+
+    <p>
+      En mi tiempo libre disfruto de los videojuegos, tambien soy un entusiaste del ejercicio fisico; creo en la importancia de mantener un equilibrio saludable entre cuerpo y mente. La actividad física no solo me ayuda a mantenerme en forma, sino que tambien a ser <strong>diciplinado y productivo.</strong>
+    </p>
+  </div>
+
+  <img
+    width="200"
+    height="200"
+    src="/3.png"
+    alt={personalImageAlt}
+    class="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-64 aspect-square rounded-2xl bg-black/20 dark:bg-yellow-500/5 ring-1 ring-black/70 dark:ring-white/20"
+    style="object-position: 50% 50%"
+  />
+</article>
