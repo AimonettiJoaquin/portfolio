@@ -1,0 +1,23 @@
+{
+  "TITLE": "Joaquin's Portfolio - Developer",
+  "DESCRIPTION": "Hire Joaquin",
+  "HERO_BADGE": "Avaible to work",
+  "HERO_TITLE": "Hey! I'm Joaquin",
+  "HERO_DESCRIPTION": "<strong>Developer from Cordoba, Argentina</strong> with over 4 years of programming experience. Specialized in BackEnd. A diligent person with a strong ability to work in a team and solve problems. I am looking for an opportunity to apply my knowledge and grow professionally in the field of software development.",
+  "HERO_MAILPILL": "Contact me",
+  "ABOUT_H1": "About me",
+  "ABOUT_P1_1": "My name is Joaquín Aimonetti, I am ",
+  "ABOUT_P1_2": "years old, and I am from Córdoba, Argentina. I studied the 'Tecnicatura Universitaria en Programación' at the Universidad Tecnologica Nacional. <strong>I focus on BackEnd</strong>, finding solutions to problems",
+  "ABOUT_P2": "Currently, I am working on projects that <strong>challenge</strong> me and help me <strong>grow</strong> as a professional",
+  "ABOUT_P3": "One of my passions is philosophy; I find that <strong>critical thinking</strong> and <strong>rigorous analysis</strong> provide a unique advantage in  <strong>tackling problems</strong> and <strong>seeking solutions</strong>.",
+  "ABOUT_P4": "In my free time, I enjoy video games and am also an exercise enthusiast; I believe in the importance of maintaining a healthy balance between body and mind. Physical activity not only helps me stay fit but also makes me <strong>disciplined and productive</strong>",
+  "PROJECTS_H1": "Projects",
+  "CONTACTS_H1": "Contact",
+  "RIBONE_DESCRIPTION": "The Ribone Viajes API is a solution designed to manage travel and tourism services. This project allows users to explore and book different types of trips. Developed with best practices in mind, this API ensures scalability and maintainability.",
+  "ONG_TITLE":"NGO's API",
+  "ONG_DESCRIPTION":"This project is an API developed for a non-governmental organization (NGO), designed to manage the sending of newsletters to its registered members. It uses Node.js and Express as the server framework, with authentication and user management via JWT. The newsletters are generated and sent through the API, ensuring that members receive regular and relevant updates.",
+  "DISNEY_TITLE":"Disney API",
+  "DISNEY_DESCRIPTION":"This project is an API developed with Node.js, designed to manage information about Disney movies and characters. It uses Express as the server framework and Sequelize for database interaction. Authentication and security are handled with JSON Web Tokens (JWT). Images of movies and characters are stored in AWS S3. The project has been thoroughly tested with Postman.",
+  "SUPER_TITLE":"Stock Control Super Mami",
+  "SUPER_DESCRIPTION":"Stock Control Super Mami is an inventory management system designed for supermarkets. This project was my first experience working as part of a team as a developer. It represented a significant challenge, as we used technologies I was not familiar with. The system allows detailed tracking of stock, facilitating the administration and control of products in the supermarket."
+}
