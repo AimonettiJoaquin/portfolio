@@ -1,0 +1,20 @@
+---
+import { LANGUAGES } from "@/i18n/";
+---
+
+<div class="relative ml-1 mr-1">
+  <ul>
+    {
+      Object.entries(LANGUAGES).map(([lang, label]) => (
+        <li>
+          <a
+            class="relative block px-2 transition hover:text-green-500 dark:hover:text-green-400"
+            href={`/${label}/`}
+          >
+            {lang}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</div>
