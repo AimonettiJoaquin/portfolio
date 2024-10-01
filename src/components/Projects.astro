@@ -10,12 +10,16 @@ import LinkButton from "./LinkButton.astro";
 import GitHub from "./icons/GitHub.astro";
 import MySQL from "./icons/MySQL.astro";
 import AWS from "./icons/AWS.astro";
+import Go from "./icons/Go.astro";
+import Zinc from "./icons/Zinc.astro";
 import Sequelize from "./icons/Sequelize.astro";
 
 import { getI18N } from "@/i18n";
 const { currentLocale } = Astro;
 const i18n = getI18N({ currentLocale });
 
+let EItitle = i18n.EMAIL_TITLE
+let EIdescription = i18n.EMAIL_DESCRIPTION
 let RVdescription = i18n.RIBONE_DESCRIPTION
 let ONGTitle = i18n.ONG_TITLE 
 let ONGDesc = i18n.ONG_DESCRIPTION
@@ -75,9 +79,30 @@ const TAGS = {
     class: "bg-black dark:bg-[white]/50 text-white font-semibold",
     icon: Sequelize,
   },
+  GO: {
+    name: "Golang",
+    class: "bg-black dark:bg-[white]/50 text-white font-semibold",
+    icon: Go,
+  },
+  ZINC: {
+    name: "ZincSearch",
+    class: "bg-black dark:bg-[white]/50 text-white font-semibold",
+    icon: Zinc,
+  },
 };
 
 const PROJECTS = [
+{
+    title: EItitle,
+    description: EIdescription ,
+    link: "#",
+    github: "https://github.com/AimonettiJoaquin/EmailIndex",
+    image: "/projects/Zinc.webp",
+    tags: [
+      TAGS.GO,
+      TAGS.ZINC,
+    ],
+  },
   {
     title: "Ribone Viajes API",
     description: RVdescription ,
