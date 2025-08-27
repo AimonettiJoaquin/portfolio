@@ -1,0 +1,73 @@
+---
+import Node from "./icons/Node.astro";
+import Express from "./icons/Express.astro";
+import MySQL from "./icons/MySQL.astro";
+// Importa más iconos según tus tecnologías
+
+import { getI18N } from "@/i18n";
+
+const { currentLocale } = Astro;
+const i18n = getI18N({ currentLocale });
+
+// Define los tags como objetos con name e icon
+const TAGS = {
+  NODEJS: { name: "Node.js", icon: Node },
+  EXPRESS: { name: "Express", icon: Express },
+  MYSQL: { name: "MySQL", icon: MySQL },
+  // Agrega más tecnologías aquí
+};
+
+const WORKS = [
+  {
+    company: i18n.WORK_1_COMPANY,
+    role: i18n.WORK_1_ROLE,
+    period: i18n.WORK_1_PERIOD,
+    description: i18n.WORK_1_DESCRIPTION,
+    tags: [
+      TAGS.NODEJS,
+      TAGS.EXPRESS,
+      TAGS.MYSQL,
+      // Agrega más tags aquí
+    ],
+    logo: "/work/Kiura.webp",
+    link: "https://www.kiura.co/"
+  }
+  // Agrega más experiencias aquí
+];
+---
+
+<div class="flex flex-col gap-y-16">
+  {
+    WORKS.map(({ company, role, period, description, tags, logo, link }) => (
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/3 flex items-center justify-center">
+          <a href={link} target="_blank" rel="noopener">
+            <img
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-100 md:group-hover:scale-95"
+              loading="lazy"
+              src={logo}
+              alt={company}
+            />
+          </a>
+        </div>
+        <div class="w-full md:w-2/3">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {role} <span class="text-green-500">@ {company}</span>
+          </h3>
+          <div class="text-sm text-gray-500 dark:text-gray-400 mb-2">{period}</div>
+          <div class="mt-2 text-gray-700 dark:text-gray-300">{description}</div>
+          <ul class="flex gap-x-2 flex-row mt-3 flex-wrap">
+            {tags.map((tag) => (
+              <li>
+                <span class="bg-green-100 dark:bg-green-900/40 text-green-700 dark:text-green-200 font-semibold rounded-full text-xs py-1 px-2 flex items-center gap-x-1">
+                  <tag.icon class="size-4" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </article>
+    ))
+  }
+</div>

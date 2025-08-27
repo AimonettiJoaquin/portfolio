@@ -3,7 +3,7 @@
   "DESCRIPTION": "Hire Joaquin",
   "HERO_BADGE": "Avaible to work",
   "HERO_TITLE": "Hey! I'm Joaquin",
-  "HERO_DESCRIPTION": "<strong>Developer from Cordoba, Argentina</strong> with over 4 years of programming experience. Specialized in BackEnd. A diligent person with a strong ability to work in a team and solve problems. I am looking for an opportunity to apply my knowledge and grow professionally in the field of software development.",
+  "HERO_DESCRIPTION": "<strong>Developer from Córdoba, Argentina</strong> since 2019. Specialized in <strong>BackEnd</strong>, with experience in <strong>Node.js, Golang, C# and Java</strong>, focused on <strong>API</strong> development, <strong>SQL and NoSQL</strong> database management, and integration with <strong>AWS</strong> services. Recognized for my ability to learn quickly, adaptability, and teamwork, with the goal of continuing to grow, contribute to scalable solutions, and deliver high-quality results.",
   "HERO_MAILPILL": "Contact me",
   "ABOUT_H1": "About me",
   "ABOUT_P1_1": "My name is Joaquín Aimonetti, I am ",
@@ -21,5 +21,10 @@
   "SUPER_TITLE":"Stock Control Super Mami",
   "SUPER_DESCRIPTION":"Stock Control Super Mami is an inventory management system designed for supermarkets. This project was my first experience working as part of a team as a developer. It represented a significant challenge, as we used technologies I was not familiar with. The system allows detailed tracking of stock, facilitating the administration and control of products in the supermarket.",
   "EMAIL_DESCRIPTION":"The email indexer is a Go application designed to efficiently process and index large volumes of email data. It is specifically designed to handle the Enron email dataset but can also be adapted for other email datasets. It utilizes Go's goroutines for parallel processing of email files, significantly improving performance on multi-core systems and implements a batching mechanism to optimize the indexing process, reducing network overhead and improving overall throughput by 1333%. It seamlessly indexes processed emails into ZincSearch, a lightweight alternative to Elasticsearch, showcasing the ability to work with modern search technologies. It includes built-in CPU and memory profiling, enabling detailed analysis and optimization of the application's performance.",
-  "EMAIL_TITLE":"Email Indexer"
+  "EMAIL_TITLE":"Email Indexer",
+  "WORK_H1": "Work Experience",
+  "WORK_1_COMPANY": "Kiura",
+  "WORK_1_ROLE": "Backend Developer",
+  "WORK_1_PERIOD": "February 2025 - June 2025",
+  "WORK_1_DESCRIPTION": "Development of an employment platform for the construction sector, focusing on backend architecture. Integrations with payment gateways and AI APIs for automatic generation of professional profiles and CVs. Complete technical documentation of the project and functional testing to ensure quality and performance. Initial participation as part of a trainee group, successfully completing backend development of the application within an estimated 4-month timeframe. Team leadership of 3 trainees in the absence of senior profiles, ensuring objectives and deliverables were met. Integration of external APIs for system functionality. Collaboration with the Frontend team to ensure smooth integration, actively contributing to feature design. Client meetings for functionality validation and feature planning, achieving a high satisfaction rate during pilot testing."
 }

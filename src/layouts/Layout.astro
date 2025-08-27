@@ -27,7 +27,9 @@ const { currentLocale } = Astro;
   <body class="relative text-black dark:text-white">
     <Background />
     <Header />
+    <div class="container mx-auto px-4 flex-1 w-full max-w-4xl">
     <slot />
+    </div>
     <Footer />
   </body>
 </html>
@@ -36,25 +38,39 @@ const { currentLocale } = Astro;
     color-scheme: light dark;
   }
   html {
+    font-size: 18px;
+    line-height: 1.7;
     font-family: "Onest Variable", system-ui, sans-serif;
     scroll-behavior: smooth;
   }
   body {
+    background: #f8fafc;
+    padding-bottom: 2rem;
     color: rgba(17, 17, 17, 0.9);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     overscroll-behavior: none;
   }
-  @media (prefers-reduce-motion: reduce) {
+  @media (max-width: 640px) {
     html {
       scroll-behavior: auto;
+    }
+    .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    max-width: 100vw;
+  }
+    #header-nav {
+      backdrop-filter: blur(8px);
+      padding: 0.25rem 0.5rem;
     }
   }
 
   @media (prefers-color-scheme: dark) {
     body {
       color: rgba(255, 255, 255, 0.9);
+      background: #18181b;
     }
   }
 

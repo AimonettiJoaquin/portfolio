@@ -9,8 +9,13 @@ const i18n = getI18N({ currentLocale });
 let projects =  i18n.PROJECTS_H1
 let about =  i18n.ABOUT_H1
 let contact =  i18n.CONTACTS_H1
+let work = i18n.WORK_H1;
 const navItems = [
-  
+  {
+    title: work,
+    label: work,
+    url: "#work",
+  },
   {
     title: projects,
     label: projects,
@@ -33,7 +38,7 @@ const navItems = [
   class="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2"
 >
   <nav
-    class="flex px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
+    class="flex flex-wrap gap-x-2 gap-y-2 px-3 text-sm font-medium rounded-full text-gray-600 dark:text-gray-200 justify-center items-center"
   >
     {
       navItems.map((link) => (
